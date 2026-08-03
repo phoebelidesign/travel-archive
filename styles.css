@@ -1,0 +1,68 @@
+:root {
+  --gap: 5px;
+  --cols: 24;
+  --row-h: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  padding: 0;
+}
+
+/* ---- GRID ---- */
+.composition {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-auto-rows: var(--row-h);
+  gap: var(--gap);
+  max-width: 1400px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  touch-action: none;
+}
+.item.dragging {
+  cursor: grabbing;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+}
+
+.item img,
+.item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none; /* clicks/drags go to .item, not the media element */
+}
+
+.resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  cursor: nwse-resize;
+}
+.resize-handle::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid magenta;
+  border-bottom: 2px solid magenta;
+}
