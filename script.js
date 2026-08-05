@@ -9,18 +9,18 @@
   Everything renders and drags/resizes as free pixel positioning.
 */
 const CONFIG = {
-  seed: 1,
+  seed: 3,
   cols: 24,
-  rows: 32,
-  minColSpan: 1,
-  maxColSpan: 2,
-  minRowSpan: 1,
-  maxRowSpan: 3,
-  candidatesPerImage: 30,   // how many random options are compared per item before picking the best
+  rows: 64,
+  minColSpan: 2,
+  maxColSpan: 3,
+  minRowSpan: 2,
+  maxRowSpan: 4,
+  candidatesPerImage: 50,   // how many random options are compared per item before picking the best
   maxRotate: 0,             // degrees, +/-, for a hand-placed feel (0 to disable). Cleared on manual drag.
-  gapPx: 5,                // breathing room between items in the starting layout
-  rowUnitPx: 48,            // px height of one virtual row — controls vertical density
-  minItemPx: 40,            // floor size when resizing by hand
+  gapPx: 10,                // breathing room between items in the starting layout
+  rowUnitPx: 32,            // px height of one virtual row — controls vertical density
+  minItemPx: 32,            // floor size when resizing by hand
 
   // Ambient cycling: every so often, whichever item is currently most
   // "buried" (lowest z-index) gets brought to the front on its own —
@@ -35,10 +35,6 @@ const CONFIG = {
   // for browsers to allow autoplay), and are paused automatically while off-screen.
   media: [
     { type: "image", src: "assets/1.jpeg" },
-    { type: "image", src: "assets/2.jpeg" },
-    { type: "image", src: "assets/3.jpeg" },
-    { type: "image", src: "assets/4.jpeg" },
-    { type: "image", src: "assets/5.jpeg" },
     { type: "image", src: "assets/6.jpeg" },
     { type: "image", src: "assets/7.jpeg" },
     { type: "image", src: "assets/8.jpeg" },
@@ -74,7 +70,40 @@ const CONFIG = {
     { type: "image", src: "assets/38.jpeg" },
     { type: "image", src: "assets/39.jpeg" },
     { type: "image", src: "assets/40.jpeg" },
-    { type: "video", src: "assets/1.mp4" },
+    { type: "image", src: "assets/41.jpeg" },
+    { type: "image", src: "assets/42.jpeg" },
+    { type: "image", src: "assets/43.jpeg" },
+    { type: "image", src: "assets/44.jpeg" },
+    { type: "image", src: "assets/45.jpeg" },
+    { type: "image", src: "assets/46.jpeg" },
+    { type: "image", src: "assets/47.jpeg" },
+    { type: "image", src: "assets/48.jpeg" },
+    { type: "image", src: "assets/49.jpeg" },
+    { type: "image", src: "assets/50.jpeg" },
+    { type: "image", src: "assets/51.jpeg" },
+    { type: "image", src: "assets/52.jpeg" },
+    { type: "image", src: "assets/53.jpeg" },
+    { type: "video", src: "assets/1.mov" },
+    { type: "video", src: "assets/2.mov" },
+    { type: "video", src: "assets/3.mov" },
+    { type: "video", src: "assets/4.mov" },
+    { type: "video", src: "assets/5.mov" },
+    { type: "video", src: "assets/6.mov" },
+    { type: "video", src: "assets/7.mov" },
+    { type: "video", src: "assets/8.mov" },
+    { type: "video", src: "assets/9.mov" },
+    { type: "video", src: "assets/10.mov" },
+    { type: "video", src: "assets/11.mov" },
+    { type: "video", src: "assets/12.mov" },
+    { type: "video", src: "assets/13.mov" },
+    { type: "video", src: "assets/14.mov" },
+    { type: "video", src: "assets/15.mov" },
+    { type: "video", src: "assets/16.mov" },
+    { type: "video", src: "assets/17.mov" },
+    { type: "video", src: "assets/18.mov" },
+    { type: "video", src: "assets/19.mov" },
+    { type: "video", src: "assets/20.mov" },
+    { type: "video", src: "assets/21.mov" },
   ]
 };
 
