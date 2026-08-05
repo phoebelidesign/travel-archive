@@ -9,7 +9,7 @@
   Everything renders and drags/resizes as free pixel positioning.
 */
 const CONFIG = {
-  seed: 5,
+  seed: 8,
   cols: 24,
   rows: 64,
   minColSpan: 2,
